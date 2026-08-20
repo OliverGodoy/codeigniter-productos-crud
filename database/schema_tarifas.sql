@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS productos_crud;
+USE productos_crud;
+
+CREATE TABLE IF NOT EXISTS tarifas (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio_por_metro_cubico DECIMAL(10,2) NOT NULL,
+    consumo_minimo INT NOT NULL DEFAULT 0,
+    activa TINYINT(1) NOT NULL DEFAULT 1,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL
+);
